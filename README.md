@@ -58,11 +58,40 @@ The tools placed in Android SDK are given below:
 <h2 align="center">What is the use of Bundle in Android?</h2>
 
 <b>Bundles are used to pass the required data between various Android activities. These are like HashMap that can take trivial data types. Below code shows how to transfer a piece of data by using bundle:</b>
+
 ```
 Bundle b=new Bundle();
 b.putString("Email","abc@xyz.com");
 i.putExtras(b); // where i is intent
 ```
+<h2 align="center">What is an Adapter in Android?</h2>
+
+<b>An adapter in Android acts as a bridge between an AdapterView and the underlying data for that view. The adapter holds the data and sends the data to the adapter view, the view can take the data from the adapter view and shows the data on different views like a spinner, list view, grid view, etc.</b>
+
+<h2 align="center">What is AAPT?</h2>
+
+<b>AAPT stands for Android Asset Packaging Tool. It is a build tool that gives the ability to developers to view, create, and update ZIP-compatible archives (zip, jar, and apk). It parses, indexes, and compiles the resources into a binary format that is optimized for the platform of Android..</b>
+
+<h2 align="center">What is portable Wi-Fi hotspot?</h2>
+
+<b>Portable Wi-Fi Hotspot permits you to share your mobile internet connection with other wireless devices.</b>
+
+<h2 align="center">What is Android Debug Bridge(ADB)?</h2>
+
+<b>Android Debug Bridge is a command-line tool used to allow and control communication with an emulator instance. It gives the power for developers to execute remote shell commands to run applications on an emulator.</b>
+
+<h2 align="center">What is DDMS?</h2>
+
+<b> DDMS(Dalvik Debug Monitor Server) is a debugging tool in the Android platform. It gives the following list of debugging features:<b/>
+
+- Port forwarding services.
+- Thread and heap information.
+- Logcat.
+- Screen capture on the device.
+- Network traffic tracking.
+- Incoming call and SMS spoofing.
+- Location data spoofing.
+
 
 <h2 align="center">Abbreviation</h2>
 
@@ -72,3 +101,4 @@ i.putExtras(b); // where i is intent
 - <b> GUI: Graphical User Interface</b>
 - <b> DDMS: Dalvik Debug Monitoring Services</b>
 - <b> AAPT: Android Asset Packaging Tool</b>
+- <b> ADB: Android Debug Bridge</b>
