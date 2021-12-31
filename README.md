@@ -92,6 +92,17 @@ i.putExtras(b); // where i is intent
 - Incoming call and SMS spoofing.
 - Location data spoofing.
 
+<h2 align="center">What is AIDL? Which data types are supported by AIDL?</h2>
+<b>AIDL(Android Interface Definition Language) is a tool that handles the interface requirements between a client and a service for interprocess communication(IPC) to communicate at the same level.</b>
+<br>
+<b>The process involves dividing an object into primitives that are understood by the Android operating system. Data Types supported by AIDL is as follows:</b>
+
+- String
+- List
+- Map
+- CharSequence
+- Java data types (int, long, char, and boolean)
+
 
 <h2 align="center">Abbreviation</h2>
 
