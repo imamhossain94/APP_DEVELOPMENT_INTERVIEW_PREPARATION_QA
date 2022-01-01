@@ -103,7 +103,43 @@ i.putExtras(b); // where i is intent
 - CharSequence
 - Java data types (int, long, char, and boolean)
 
+<h2 align="center">What is the life cycle of Android activity?</h2>
+    
 
+- OnCreate(): <br>It is called when activity is created. Using this, the views are created and data is collected from bundles.
+- OnStart(): <br>It is called if the activity is becoming visible to the user. It may be succeeded by onResume() if the activity comes to the foreground, or onStop() if it becomes hidden.
+- OnResume(): <br>It is called when the activity will start an interaction with the user.
+- OnPause(): <br>This is called when the activity is moving to the background but hasn’t been killed yet.
+- OnStop(): <br>This is called when an activity is no longer visible to the user.
+- OnDestroy(): <br>This is called when the activity is finished or destroyed.
+- OnRestart(): <br>This is called after the activity has been stopped, prior to it being started again.
+
+
+<h2 align="center">Explain Sensors in Android.</h2>
+    
+Android-based devices have a collection of built-in sensors in them, which measure certain parameters like motion, orientation, and many more through their high accuracy. The sensors can be both hardware and software based on nature. There are three prominent categories of sensors in Android devices.
+<br>They are:
+
+- Position Sensor: <br>It is used for measuring the physical position of the Android device. This has orientation sensors and magnetometers.
+- Motion Sensors: <br>These sensors consist of gravity, rotational activity, and acceleration sensors which measure the rotation of the device or the acceleration, etc.
+- Environmental Sensor: <br>It includes sensors that measure temperature, humidity, pressure, and other environmental factors.
+
+<h2 align="center">Explain the dialog boxes supported on Android.</h2>
+    
+Android supports four dialog boxes. They are:
+    
+- AlertDialog:
+        <br>The AlertDialog supports 0-3 buttons, along with a list of selectable items such as checkboxes and radio buttons.
+        It is used when you want to ask the user about taking a decision between yes or no in response to any particular action taken by the user, by remaining in the same activity and without changing the screen.
+- DatePickerDialog:
+        <br>It is used for selecting the date by the user.
+- TimePickerDialog:
+        <br>Used for selecting the time by the user.
+- ProgressDialog:
+        <br>It is an extension of the AlertDialog and is used to display a progress bar. It also supports the addition of buttons.
+        This class was deprecated in API level 26 because it prevents the user from interacting with the application. Instead of this class, we can use a progress indicator such as ProgressBar, which can be embedded in the user interface of your application.
+
+    
 <h2 align="center">Abbreviation</h2>
 
 - <b> ART: Android RunTime</b>
