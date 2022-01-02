@@ -139,6 +139,25 @@ Android supports four dialog boxes. They are:
         <br>It is an extension of the AlertDialog and is used to display a progress bar. It also supports the addition of buttons.
         This class was deprecated in API level 26 because it prevents the user from interacting with the application. Instead of this class, we can use a progress indicator such as ProgressBar, which can be embedded in the user interface of your application.
 
+<h2 align="center">What is AndroidManifest.xml file and why do you need this?</h2>
+
+- The AndroidManifest.xml file contains information regarding the application that the Android system must know before the codes can be executed.
+- This file is essential in every Android application.
+- It is declared in the root directory.
+- This file performs several tasks such as:
+- Providing a unique name to the java package.
+- Describing various components of the application such as activity, services, and many more.
+- Defining the classes which will implement these components.
+
+<h2 align="center">What is an intent?</h2>
+    
+An intent is a messaging object that is used to request an action from other components of an application. It can also be used to launch an activity, send SMS, send an email, display a web page, etc.
+
+It shows notification messages to the user from within an Android-enabled device. It alerts the user of a particular state that occurred. There are two types of intents in Android:
+
+- Implicit Intent- Used to invoke the system components.
+- Explicit Intent- Used to invoke the activity class.
+
     
 <h2 align="center">Abbreviation</h2>
 
