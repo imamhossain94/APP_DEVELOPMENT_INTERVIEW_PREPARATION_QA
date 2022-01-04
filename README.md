@@ -158,7 +158,71 @@ It shows notification messages to the user from within an Android-enabled device
 - Implicit Intent- Used to invoke the system components.
 - Explicit Intent- Used to invoke the activity class.
 
+<h2 align="center">Mention the difference between class, file and activity in Android?</h2>
     
+The difference between them is as follows:
+
+ 
+- Class is a compiled form of a .java file that Android uses to produce an executable .apk file.
+- A file is a block of arbitrary information or resources used for storing information. It can be of any file type.
+- Activity is a single screen that represents GUI(Graphical User Interface) with which users can interact in order to do something like dial the phone, view email, etc.
+
+<h2 align="center">What is a Toast? Write its syntax.</h2>
+    
+Toast is a message that pops up on the screen. It is used to display the message regarding the status of the operation initiated by the user and covers only the expanse of space required for the message while the user’s recent activity remains visible and interactive.
+
+Toast notification automatically fades in and out and it does not accept interaction events.
+
+```
+Toast.makeText(ProjectActivity.this, "Your message here", Toast.LENGTH_LONG).show();
+```
+
+<h2 align="center">What is context?</h2>
+
+The context in Android is the context of the current state of the application or object. The context comes with services like giving access to databases and preferences, resolving resources, and more.
+There are two types of context. They are:
+    
+<h3 align="center">Activity context</h3>
+
+- This activity context is attached to the lifecycle of an activity.
+- The activity context can be used when you are passing the context in the scope of an activity or you need the context whose lifecycle is attached to the context of the activity.
+    
+<h3 align="center">Application context:</h3>
+
+- This application context is attached to the lifecycle of an application.
+- The application context should be used where you need a context whose lifecycle is separate from the current context or when you are passing a context beyond the scope of activity.
+
+<h2 align="center">Abbreviation</h2>
+    
+The difference between the implicit and explicit Intents are given below:
+
+<h3 align="center">Explicit Intent:</h3>
+
+An Explicit Intent is where you inform the system about which activity should handle this intent. Here target component is defined directly in the intent.
+```
+ Intent i = new Intent(this, Activitytwo.class); #ActivityTwo is the target component
+i.putExtra("Value1","This is ActivityTwo"); 
+i.putExtra("Value2","This Value two for ActivityTwo"); 
+startactivity(i);
+```
+<h3 align="center">Implicit Intent:</h3>
+
+An Implicit Intent permits you to declare the action you want to carry out. Further, the Android system will check which components are registered to handle that specific action based on intent data. Here target component is not defined in the intent.
+    
+```
+Intent i = new Intent(ACTION_VIEW,Uri.parse("http://www.interview bit.com")); 
+startActivity(i);
+```
+<h2 align="center">What is ANR in Android? What are the measures you can take to avoid ANR?</h2>
+
+ANR(Application is Not Responding) is a dialog box that appears when the application is not responding. This ANR dialogue is displayed whenever the main thread within an application has been unresponsive for a long time under the following conditions:
+- When there is no response to an input event even after 5 seconds.
+- When a broadcast receiver has not completed its execution within 10 seconds.
+
+Following measures can be taken to avoid ANR:
+- An application should perform lengthy database or networking operations in separate threads to avoid ANR.
+- For background task-intensive applications, you can lessen pressure from the UI thread by using the IntentService.
+
 <h2 align="center">Abbreviation</h2>
 
 - <b> ART: Android RunTime</b>
