@@ -246,7 +246,7 @@ The different launch modes in Android are given below:
 - This launch mode generates an activity’s new instance in the task from which it originated.
 - It is possible to create several instances for the same activity.
 - For Example, suppose our current stack is A -> B -> C. Now, if we launch activity B again with the “standard” launch mode, then the new stack will be A -> B -> C -> B.
-<br>
+
 `SingleTop:`
 
 - This launch mode is similar to the Standard launch mode except if there exists an activity’s previous instance on the top of the stack, then a new instance will not be created.
@@ -302,8 +302,89 @@ It describes the basic characteristics of the application and defines each of it
 `res:`
 - It is used to store the values for the resources that are used in various Android projects to include features of color, styles, dimensions, etc.
 - It is a directory for files like styles.xml, strings.xml, colors.xml, dimens.xml, etc.
+
 `Scripts:`<br>
  This is an auto-generated file that consists of compileSdkVersion, buildToolsVersion, minSdkVersion, targetSdkVersion, applicationId, versionCode, and versionName. For example, build.gradle is a script file placed in the root project directory, defines build configurations that will be applied to all modules in your project.
+    
+<h2 align="center">What is the difference between Serializable and Parcelable? Which is the best approach in Android?</h2>
+
+While developing applications usually it needs to transfer data from one activity to another. This data needs to be added into a corresponding intent object. Some additional actions are required to make the data suitable for transfer. For doing that the object should be either serializable or parcelable.
+
+`Serializable:`
+- Serializable is a standard Java interface. In this approach, you simply mark a class Serializable by implementing the interface and java will automatically serialize it.
+- Reflection is used during the process and many additional objects are created. This leads to plenty of garbage collection and poor performance.
+<br>
+`Parcelable:`
+- Parcelable is an Android-specific interface. In this approach, you implement the serialization yourself.
+- Reflection is not used during this process and hence no garbage is created.
+- Parcelable is far more efficient than Serializable since it gets around some problems with the default Java serialization scheme. Also, it is faster because it is optimized for usage on the development of Android, and shows better results.
+
+
+<h2 align="center">What database is used in Android? How it is different from client-server database management systems?</h2>
+    
+SQLite is the open-source relational database used in Android. The SQLite engine is serverless, transactional, and also self-contained. Instead of the client-server relationship of most database management systems, the SQLite engine is integrally linked with the application. The library can be called dynamically and it can make use of simple function calls that reduce latency in database access.
+
+<h2 align="center">What are the differences between Service and Thread?</h2>
+
+The main difference between Service and Thread is given below:
+
+| Service  | Thread |
+| ------------- | ------------- |
+| Service is an application component that facilitates an application to run in the background in order to perform long-running operations without user interaction.  | A Thread is a concurrent unit of execution.  |
+| It exposes few functionalities to other applications by calling Context.bindService().  | Google has brought in handlers and loopers into threads.  |
+| When an application is killed, service is not killed.  | When an application is killed, the thread is killed.  |
+
+<h2 align="center">Abbreviation</h2>
+
+Content provider is one of the primary building blocks of Android applications, which manages access to a central repository of data. It acts as a standard interface that connects data in one process with code running in another process. So it can be used to share the data between different applications.
+
+They are responsible for encapsulating the data and providing mechanisms for defining data security. It is implemented as a subclass of ContentProviderclass and must implement a set of APIs that will enable other applications to perform transactions.
+
+```java
+public class MyContentprovider extends ContentProvider 
+{
+ public void onCreate(){}
+}
+```
+<h2 align="center">What is the significance of the .dex file?</h2>
+    
+Android programs are compiled into a .dex file (Dalvik Executable file) by DVM, which are then zipped into a .apk file on the device. .dex files are created by translating compiled applications written in java. .dex is a format that is optimized for effective storage and memory-mappable executions.
+
+<h2 align="center">What is the difference between compileSdkVersion and targetSdkVersion?</h2>
+    
+`compileSdkVersion:`
+
+- The compileSdkVersion is the version of API the application is compiled against. You can use Android API features involved in that version of the API (as well as all previous versions).
+- For example, if you try and use API 15 features but set compileSdkVersion to 14, you will get a compilation error. If you set compileSdkVersion to 15 you can still run the app on an API 14 device as long as your app’s execution paths do not attempt to invoke any APIs specific to API 15.
+
+`targetSdkVersion:`
+<br>
+- The targetSdkVersion indicates that you have tested your app on (presumably up to and including) the version you specify. This is like a certification or sign-off you are giving the Android OS as a hint to how it should handle your application in terms of OS features.
+- For example, setting the targetSdkVersion value to “11” or higher permits the system to apply a new default theme (Holo) to the application when running on Android 3.0 or higher. It also disables screen compatibility mode when running on larger screens (because support for API level 11 implicitly supports larger screens).
+
+<h2 align="center">Explain about java classes related to the use of sensors on Android.</h2>
+
+Android sensor API provides many classes and interface for the use of sensors on Android. The important classes and interfaces of sensor API are given below:
+
+- `Sensor class:` This class helps you to create an instance of a specific sensor. It provides methods that let you determine a sensor’s capabilities.
+- `SensorManager class:` This class is used to create an instance of the sensor service. It provides methods to access and list sensors, to register and unregister sensor listeners, etc.
+- `SensorEvent class:` This Java class is used to create a sensor event object. It provides information about the sensor event including raw sensor data, the accuracy of data, type of sensor, timestamp of event, etc.
+- `SensorEventListener interface:` This interface is used to create two callback methods that receive sensor event notifications when sensor value changes or when sensor accuracy changes. Those two methods are `void onAccuracyChanged(Sensor sensor, int accuracy)` which is called when sensor accuracy is changed and
+ `void onSensorChanged(SensorEvent event)` which is called when sensor values are changed.
+
+<h2 align="center">What is JobScheduler?</h2>
+
+The JobSchedular API is used for scheduling different types of jobs against the framework that will be executed in your app’s own process. This allows your application to perform the given task while being considerate of the device’s battery at the cost of timing control.
+
+The JobScheduler supports batch scheduling of jobs. The Android system can combine jobs for reducing battery consumption. JobManager automatically handles the network unreliability so it makes handling uploads easier.
+
+Here is some example of the situation where you would use this job scheduler:
+
+- Tasks that should be done when the device is connected to a power supply.
+- Tasks that require a Wi-Fi connection or network access.
+- Tasks that should run on a regular basis as batch where the timing is not critical.
+
+
 <h2 align="center">Abbreviation</h2>
     
 - <b> ART: Android RunTime</b>
