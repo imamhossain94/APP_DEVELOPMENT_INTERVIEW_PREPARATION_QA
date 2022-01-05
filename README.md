@@ -292,7 +292,20 @@ public class MyReceiver extends BroadcastReceiver
 }
 ```
  
+<h2 align="center">Explain in detail about the important file and folders used when you create a new Android application.</h2>
+
+It describes the basic characteristics of the application and defines each of its components.
+<br>
+`java:`
+- This contains the .java source files and .kt(source code written in Kotlin) source files of your project. By default, it includes a MainActivity.java or MainActivity.kt source file.
+- You create all the activities which have .java and .kt extensions under this file and also it includes all the code behind the application.
+`res:`
+- It is used to store the values for the resources that are used in various Android projects to include features of color, styles, dimensions, etc.
+- It is a directory for files like styles.xml, strings.xml, colors.xml, dimens.xml, etc.
+`Scripts:`<br>
+ This is an auto-generated file that consists of compileSdkVersion, buildToolsVersion, minSdkVersion, targetSdkVersion, applicationId, versionCode, and versionName. For example, build.gradle is a script file placed in the root project directory, defines build configurations that will be applied to all modules in your project.
 <h2 align="center">Abbreviation</h2>
+    
 - <b> ART: Android RunTime</b>
 - <b> DVM: Dalvik Virtual Machine</b>
 - <b> UI: User Interface</b>
