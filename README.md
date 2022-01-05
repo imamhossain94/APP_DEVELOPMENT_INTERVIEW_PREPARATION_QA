@@ -384,7 +384,6 @@ Here is some example of the situation where you would use this job scheduler:
 - Tasks that require a Wi-Fi connection or network access.
 - Tasks that should run on a regular basis as batch where the timing is not critical.
 
-
 <h2 align="center">Abbreviation</h2>
     
 - <b> ART: Android RunTime</b>
@@ -394,3 +393,26 @@ Here is some example of the situation where you would use this job scheduler:
 - <b> DDMS: Dalvik Debug Monitoring Services</b>
 - <b> AAPT: Android Asset Packaging Tool</b>
 - <b> ADB: Android Debug Bridge</b>
+    
+| Code name  | Version numbers | API level  | Release date |
+| ------------- | ------------- | ------------- | ------------- |
+| No codename  | 1.0  | 1  | September 23, 2008  |
+| No codename  | 1.1  | 2  | February 9, 2009  |
+| Cupcake  | 1.5  | 3  | April 27, 2009  |
+| Donut  | 1.6  | 4  |  	September 15, 2009  |
+| Eclair  | 2.0 - 2.1 | 5 - 7  | October 26, 2009  |
+| Froyo  | 2.2 - 2.2.3  | 8  | May 20, 2010  |
+| Gingerbread  | 2.3 - 2.3.7  |  	9 - 10  | December 6, 2010  |
+| Honeycomb  | 3.0 - 3.2.6  | 11 - 13  | February 22, 2011  |
+| Ice Cream Sandwich  | 4.0 - 4.0.4  | 14 - 15  | October 18, 2011  |
+| Jelly Bean  | 4.1 - 4.3.1  | 16 - 18  | July 9, 2012  |
+| KitKat  | 4.4 - 4.4.4  | 19 - 20  | October 31, 2013  |
+| Lollipop  | 5.0 - 5.1.1  | 21- 22  | November 12, 2014  |
+| Marshmallow  | 6.0 - 6.0.1  | 23  | October 5, 2015  |
+| Nougat  | 7.0  | 24  | August 22, 2016  |
+| Nougat  | 7.1.0 - 7.1.2  | 25  | October 4, 2016  |
+| Oreo  | 8.0  | 26  | August 21, 2017  |
+| Oreo  | 8.1  | 27  | December 5, 2017  |
+| Pie  | 9.0  | 28  | August 6, 2018  |
+| Android 10  | 10.0  | 29  | September 3, 2019  |
+| Android 11  | 11  | 30  | September 8, 2020  |
