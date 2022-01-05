@@ -59,7 +59,7 @@ The tools placed in Android SDK are given below:
 
 <b>Bundles are used to pass the required data between various Android activities. These are like HashMap that can take trivial data types. Below code shows how to transfer a piece of data by using bundle:</b>
 
-```
+```java
 Bundle b=new Bundle();
 b.putString("Email","abc@xyz.com");
 i.putExtras(b); // where i is intent
@@ -173,7 +173,7 @@ Toast is a message that pops up on the screen. It is used to display the message
 
 Toast notification automatically fades in and out and it does not accept interaction events.
 
-```
+```java
 Toast.makeText(ProjectActivity.this, "Your message here", Toast.LENGTH_LONG).show();
 ```
 
@@ -199,8 +199,9 @@ The difference between the implicit and explicit Intents are given below:
 <h3 align="center">Explicit Intent:</h3>
 
 An Explicit Intent is where you inform the system about which activity should handle this intent. Here target component is defined directly in the intent.
-```
- Intent i = new Intent(this, Activitytwo.class); #ActivityTwo is the target component
+    
+```java
+Intent i = new Intent(this, Activitytwo.class); #ActivityTwo is the target component
 i.putExtra("Value1","This is ActivityTwo"); 
 i.putExtra("Value2","This Value two for ActivityTwo"); 
 startactivity(i);
@@ -209,7 +210,7 @@ startactivity(i);
 
 An Implicit Intent permits you to declare the action you want to carry out. Further, the Android system will check which components are registered to handle that specific action based on intent data. Here target component is not defined in the intent.
     
-```
+```java
 Intent i = new Intent(ACTION_VIEW,Uri.parse("http://www.interview bit.com")); 
 startActivity(i);
 ```
@@ -239,6 +240,7 @@ It is not possible to test an application for all kinds of devices and operating
 <h2 align="center">Explain different launch modes in Android.</h2>
     
 The different launch modes in Android are given below:
+<br>
 `Standard:`
 
 - This launch mode generates an activity’s new instance in the task from which it originated.
