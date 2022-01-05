@@ -223,8 +223,74 @@ Following measures can be taken to avoid ANR:
 - An application should perform lengthy database or networking operations in separate threads to avoid ANR.
 - For background task-intensive applications, you can lessen pressure from the UI thread by using the IntentService.
 
-<h2 align="center">Abbreviation</h2>
+<h2 align="center">What are the troubleshooting techniques you can follow if an application is crashing frequently?</h2>
+    
+If an Android application is crashing frequently, you can follow the below-given techniques:
+    
+<h3 align="center">Compatibility Check:</h3>
+It is not possible to test an application for all kinds of devices and operating systems. There might be a possibility that an application is not compatible with your OS.
 
+<h3 align="center">Memory Management:</h3>
+
+- Some apps run perfectly on one mobile device but might crash on other devices. This is where processing power, memory management, and CPU speed are considered.
+- As there is a limited amount of memory space on mobile devices, you can free up memory space for the application to function properly.
+- If an application is frequently crashing, you can delete the application’s data, which will clear its cache memory and allow some free space on your device and might boost the app’s performance.
+
+<h2 align="center">Explain different launch modes in Android.</h2>
+    
+The different launch modes in Android are given below:
+`Standard:`
+
+- This launch mode generates an activity’s new instance in the task from which it originated.
+- It is possible to create several instances for the same activity.
+- For Example, suppose our current stack is A -> B -> C. Now, if we launch activity B again with the “standard” launch mode, then the new stack will be A -> B -> C -> B.
+<br>
+`SingleTop:`
+
+- This launch mode is similar to the Standard launch mode except if there exists an activity’s previous instance on the top of the stack, then a new instance will not be created.
+- But the intent will be sent to the activity’s existing instance.
+- For example, suppose our current stack is A -> B -> C. Now, if we launch the activity B again with “singleTop” launch mode,then the new stack will be A -> B -> C -> B.
+  Consider another example, where the current stack is A -> B -> C. Now, if we launch activity C again with the “singleTop” launch mode, then the stack will remain the same    i.e., A -> B -> C. The intent will be passed to the onNewIntent() method.
+
+`SingleTask:`
+
+- This launch mode will create a new task and push a new instance to the task as the root.
+- For example, suppose our current stack is A -> B -> C -> D. Now, if we launch activity B again with the “singleTask” launch mode, then the new stack will be A -> B. Here, a callback has been received on the old instance and C and D activities are destroyed.
+
+ `SingleInstance:`
+ 
+- This launch mode is similar to the SingleTask launch mode. But the system doesn’t support launching any new activities in the same task.
+- In a situation where the new activity is launched, it is launched in a separate task.
+- For example, Suppose our current stack is A -> B -> C. Now, if we launch the activity D with the “singleInstance” launch mode, then there will be two stacks:
+       <br>A -> B -> C 
+        <br>D, If you call activity E, then it will be added to the first stack.
+        <br>A -> B -> C -> E
+        <br>D<br>
+
+Again if you Call the activity D, then it will call the same activity from the 2nd stack and pass the intent to onNewIntent().
+    
+<h2 align="center">What are containers?</h2>
+    
+Containers carry objects and widgets together, based on which specific items are required and in what particular arrangement is needed. Containers may hold labels, buttons, fields, or even child containers, etc. For example, if you want a form with fields on the left and labels on the right, you will need a container. If you want the OK and Cancel buttons to be below the rest of the form, next to one another, and flush to the right side of the screen, you will need a container. If you have several widgets, you will need a container to have a root element to place the widgets inside.
+
+Android provides a collection of view classes that serve as containers for views. These container classes are called layouts, which are defined in the form of XML files that cannot be changed by our code during execution. The layout managers provided by Android SDK are LinearLayout, RelativeLayout, FrameLayout, AbsoluteLayout, GridLayout, and TableLayout.
+
+<h2 align="center">What is the role of Dalvik in Android development?</h2>
+    
+Dalvik serves as a virtual machine, and it is responsible for running every Android application. Because of Dalvik, a device will have the ability to execute multiple instances of virtual machines efficiently through better memory management.
+
+<h2 align="center">What are broadcast receivers? How is it implemented?</h2>
+    
+A broadcast receiver is a mechanism used for listening to system-level events like listening for incoming calls, SMS, etc. by the host application. It is implemented as a subclass of BroadcastReceiver class and each message is broadcasted as an intent object.
+ 
+```java
+public class MyReceiver extends BroadcastReceiver 
+{
+    public void onReceive(context,intent){}
+}
+```
+ 
+<h2 align="center">Abbreviation</h2>
 - <b> ART: Android RunTime</b>
 - <b> DVM: Dalvik Virtual Machine</b>
 - <b> UI: User Interface</b>
